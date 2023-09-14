@@ -22,6 +22,9 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<!-- added "pring-boot-devtools" dependency manuelly so the project gets restarted automatically and we can see teh effects of changes directly without doing save, stop ,start everytime -->
+		<!-- also from setting-> Build,execution -> Compiler ->   enable "Build project automatically"     -->
+		<!-- also from setting-> Advanced Setting -> Top part - Compiler ->   enable "Allow Auto make to start"     -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
