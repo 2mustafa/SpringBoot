@@ -1,4 +1,5 @@
 package com.Mustafa.myCoolApp.Rest;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,5 +20,19 @@ public class MyRestController { // the class name as "RestController" will cause
     public String sayMyName(@RequestParam String name) {
         return "hello " + name;
     }
+
+
+    // Injecting custom properties from application.properties file
+    @Value("${owner.name}")
+    private String ownerName;
+    @Value("${owner.phone}")
+    private String ownerPhone;
+
+    @GetMapping("/ownerinfo")
+    public String getOwnerInfo() {
+        return "Owner name: " + ownerName + " Owner phone: " + ownerPhone;
+    }
+
+
 
 }
