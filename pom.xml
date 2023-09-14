@@ -39,6 +39,14 @@
 			<version>3.1.2</version>
 		</dependency>
 
+		<!-- Added Spring Boot Security -->
+		<!-- default username is "user" and password is generated in console -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+			<version>3.1.2</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
