@@ -50,8 +50,21 @@ public class MyRestController { // the class name as "RestController" will cause
         myWeatherService = theWeatherService;
     }
 
+/*
+another approach to inject the dependency is to use setter injection:
+    @Autowired
+    public void setMyWeatherService(WeatherService theWeatherService) {
+        myWeatherService = theWeatherService;
+    }
+
+basically in code syntax, there is no difference between constructor injection and setter injection.
+it is only a naming convention that we use to differentiate between the two.
+But in general, constructor injection is preferred over setter injection.
+ */
+
+
     @GetMapping("/weather")
-    public String getDailyWorkout() {
+    public String getWeather() {
            return myWeatherService.getTheWeather();
 }
 
